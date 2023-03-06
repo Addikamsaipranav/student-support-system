@@ -10,8 +10,6 @@ mongoose.connect('mongodb://localhost/dblearning')
 .catch((err)=>console.log(err))
 
 
-
-
 //
 
 
