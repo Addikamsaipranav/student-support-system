@@ -1,8 +1,8 @@
 const express = require('express');
 const app=express();
-const queries= require("./routes/queries")
-
-const mongoose = require("mongoose")
+// const queries = require("./routes/queries")
+const mongoose = require("mongoose");
+const { json } = require('express');
 
 //db connection
 mongoose.connect('mongodb://localhost/dblearning')
@@ -11,14 +11,32 @@ mongoose.connect('mongodb://localhost/dblearning')
 
 
 //
+ const querySchema = new mongoose.Schema({
+    companyname : String,
+    companyType : String ,
+    queryid : Number ,
+    query:String ,
+    studentName:String
+})
 
 
-//using Routes
-app.use("/Allqueries",queries)
-app.use("/addquery",queries)
-app.use("/getQueries",queries)
+ const Query = mongoose.model('Query',querySchema);
+app.get("/",(req,res)=>{
+    async function getNames(){
+        const queirs =await Query
+        .find()
+        res.send(queirs)
+ }       
+      getNames()
+})
 
-app.use("/getQueries/names",queries)
+
+// //using Routes
+// app.use("/Allqueries",queries)
+// app.use("/addquery",queries)
+// app.use("/getQueries",queries)
+
+// app.use("/getQueries/names",queries)
 app.listen(3000,()=>{
     console.log("3000")
 })
