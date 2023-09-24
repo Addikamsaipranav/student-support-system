@@ -67,8 +67,8 @@ function myFunction(i,c){
             
                Email.send({
                   Host : "smtp.elasticemail.com",
-                  Username : "addikampranav39@gmail.com",
-                  Password : "65F0EA5EE8E42A1CED80947711D4A64CEA78",
+                  Username : "",
+                  Password : "",
                   To : array[i],
                   From : "addikampranav39@gmail.com",
                   Subject : "Reply for query",
