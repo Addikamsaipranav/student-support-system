@@ -72,8 +72,8 @@ function myFunction(i,c){
                console.log(array[i]);
                Email.send({
                   Host : "smtp.elasticemail.com",
-                  Username : "chittichitti1316@gmail.com",
-                  Password : "8154D60246E09B41002F5BC5BF7CA0BE99F9",
+                  Username : "",
+                  Password : "",
                   To : array[i],
                   From : "chittichitti1316@gmail.com",
                   Subject : "This is the subject",
