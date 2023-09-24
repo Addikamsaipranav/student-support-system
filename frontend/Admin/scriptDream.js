@@ -88,10 +88,10 @@ function myFunction(i,c){
             //     console.log(array[i],i)
             //    Email.send({
             //       Host : "smtp.elasticemail.com",
-            //       Username : "chittichitti1316@gmail.com",
-            //       Password : "8154D60246E09B41002F5BC5BF7CA0BE99F9",
+            //       Username : "chitti",
+            //       Password : "",
             //       To : array[i],
-            //       From : "chittichitti1316@gmail.com",
+            //       From : "",
             //       Subject : "Reply for query",
             //       Body :z
             //   }).then(()=>{
